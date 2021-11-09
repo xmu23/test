@@ -6,10 +6,10 @@ app = Flask(__name__)
 def index():
     user = {'username' : 'Tom' }
     return render_template("base.html", title="home", user=user)
-    
+
 @app.route("/about")
 def about():
-    return "About us: Naser and the cool kids from CS321"
+    return "TOM's Website"
 
 if __name__ == "__main__":
     app.run(debug = True)
