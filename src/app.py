@@ -15,8 +15,9 @@ visitors = []
 @app.route("/add", methods=["POST"])
 def add():
     visitor = request.form.get("visitor")
-    visitors.append(visitor)
-    print(visitors[-1])
+    if visitor != "":      
+        visitors.append(visitor)
+        print(visitors[-1])
     return redirect(url_for("index"))
 
 @app.route("/remove/<string:name>")
