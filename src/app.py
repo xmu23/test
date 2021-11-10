@@ -6,7 +6,7 @@ visitors = []
 
 @app.route("/")
 def index():
-    user = {'username' : 'Tom' }
+    user = {'username' : 'TomMu' }
     return render_template("base.html", title="home", user=user, visitors=visitors)
 
 @app.route("/about")
