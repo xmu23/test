@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, url_for, redirect
 
 app = Flask(__name__)
 
+visitors = []
+
 @app.route("/")
 def index():
     user = {'username' : 'Tom' }
@@ -11,7 +13,6 @@ def index():
 def about():
     return "TOM's Website"
 
-visitors = []
 @app.route("/add", methods=["POST"])
 def add():
     visitor = request.form.get("visitor")
